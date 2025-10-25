@@ -4,7 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Православный молебен</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header::before {
+            content: '✞';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 2em;
+            opacity: 0.7;
+        }
+
+        .header::after {
+            content: '✞';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
+            opacity: 0.7;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .prayer-section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #fafafa;
+            border-radius: 10px;
+            border-left: 5px solid #8B4513;
+            position: relative;
+        }
+
+        .prayer-section::before {
+            content: '✞';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5em;
+            color: #8B4513;
+            opacity: 0.6;
+        }
+
+        .prayer-title {
+            font-size: 1.4em;
+            color: #8B4513;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
+            border-bottom: 2px solid #8B4513;
+            padding-bottom: 10px;
+        }
+
+        .saints-list {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            text-align: center;
+            font-style: italic;
+            color: #555;
+        }
+
+        .separator {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.5em;
+            color: #8B4513;
+        }
+
+        .prayer-text {
+            font-size: 1.1em;
+            text-align: center;
+            line-height: 2;
+            color: #333;
+            font-style: italic;
+        }
+
+        .cross-decoration {
+            text-align: center;
+            font-size: 2em;
+            color: #8B4513;
+            margin: 30px 0;
+            opacity: 0.7;
+        }
+
+        .footer {
+            background: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .prayer-section {
+                padding: 20px;
+            }
+            
+            .prayer-title {
+                font-size: 1.2em;
+            }
+        }
+
+        .gold-accent {
+            color: #DAA520;
+            font-weight: bold;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #DAA520 0%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -25,13 +191,132 @@
                 </div>
             </div>
 
-            <!-- Остальные секции молитв остаются без изменений -->
-            <!-- ... -->
+            <div class="prayer-section">
+                <div class="prayer-title">Апостоли святии</div>
+                <div class="saints-list">Петре, Павле, Иоанне, Симоне</div>
+                <div class="separator">________________________________________________</div>
+                <div class="prayer-text">
+                    молите милостиваго <span class="gold-accent">Бога</span> / да прегрешений оставление / подаст душам нашим
+                </div>
+            </div>
+
+            <div class="prayer-section">
+                <div class="prayer-title">Свв. Равноапостольнии</div>
+                <div class="saints-list">Ольго и Владимире</div>
+                <div class="separator">________________________________________________</div>
+                <div class="prayer-text">
+                    молите милостиваго <span class="gold-accent">Бога</span> / да прегрешений оставление / подаст душам нашим.
+                </div>
+            </div>
+
+            <div class="prayer-section">
+                <div class="prayer-title">Святителие Христовы</div>
+                <div class="saints-list">Николае, Василие, Нектарие, Василие, Спиридоне, Луко, Иоанне, Иоасафе</div>
+                <div class="separator">________________________________________________</div>
+                <div class="prayer-text">
+                    молите милостиваго <span class="gold-accent">Бога</span> / да прегрешений оставление / подаст душам нашим.
+                </div>
+            </div>
+
+            <div class="prayer-section">
+                <div class="prayer-title">Свв. Священномученицы</div>
+                <div class="saints-list">Киприане, Антипо, Харалампие</div>
+                <div class="separator">________________________________________________</div>
+                <div class="prayer-text">
+                    молите милостиваго <span class="gold-accent">Бога</span> / да прегрешений оставление / подаст душам нашим.
+                </div>
+            </div>
+
+            <div class="prayer-section">
+                <div class="prayer-title">Свв. Великомученицы</div>
+                <div class="saints-list">Пантелеимоне, Георгие, Иоанне, Варваро, Екатерино</div>
+                <div class="separator">________________________________________________</div>
+                <div class="prayer-text">
+                    молите милостиваго <span class="gold-accent">Бога</span> / да прегрешений оставление / подаст душам нашим.
+                </div>
+            </div>
+
+            <div class="prayer-section">
+                <div class="prayer-title">Мученицы твои Господи</div>
+                <div class="saints-list">Викторе, Спридоне, Иоанне, Мино</div>
+                <div class="separator">________________________________________________</div>
+                <div class="prayer-text">
+                    молите милостиваго <span class="gold-accent">Бога</span> / да прегрешений оставление / подаст душам нашим.
+                </div>
+            </div>
+
+            <div class="prayer-section">
+                <div class="prayer-title">Мученицы твои, Господи</div>
+                <div class="saints-list">Елисавето, Христино, Лидие, Веро, Надеждо, Любовь, Софие, Иустино</div>
+                <div class="separator">________________________________________________</div>
+                <div class="prayer-text">
+                    молите милостиваго <span class="gold-accent">Бога</span> / да прегрешений оставление / подаст душам нашим.
+                </div>
+            </div>
+
+            <div class="prayer-section">
+                <div class="prayer-title">Преподобнии отцы наша</div>
+                <div class="saints-list">Гаврииле, Герасиме, Феодоре, Макарие, Нифонте, Сергие, Серафиме, Серафиме, Стилиане, Давиде...</div>
+                <div class="separator">________________________________________________</div>
+                <div class="prayer-text">
+                    молите милостиваго <span class="gold-accent">Бога</span> / да прегрешений оставление / подаст душам нашим.
+                </div>
+            </div>
+
+            <div class="prayer-section">
+                <div class="prayer-title">Препп. материе наша</div>
+                <div class="saints-list">Емилие и Марие</div>
+                <div class="separator">________________________________________________</div>
+                <div class="prayer-text">
+                    молите милостиваго <span class="gold-accent">Бога</span> / да прегрешений оставление / подаст душам нашим.
+                </div>
+            </div>
+
+            <div class="prayer-section">
+                <div class="prayer-title">Праведных твоих</div>
+                <div class="saints-list">Иоакима, Анны, Софрония, Тавифы</div>
+                <div class="separator">________________________________________________</div>
+                <div class="prayer-text">
+                    память, <span class="gold-accent">Господи</span>, празднующе, / Теми Тя молим, / спаси души наша.
+                </div>
+            </div>
+
+            <div class="prayer-section">
+                <div class="prayer-title">Святии блаженнии</div>
+                <div class="saints-list">Ксение, Матроно, Матроно, Любовь...</div>
+                <div class="separator">________________________________________________</div>
+                <div class="prayer-text">
+                    молите милостиваго <span class="gold-accent">Бога</span> / да прегрешений оставление / подаст душам нашим.
+                </div>
+            </div>
+
+            <div class="prayer-section">
+                <div class="prayer-title">Свв. благвв. князья</div>
+                <div class="saints-list">Александре, Данииле, Борисе и Глебе, Романе, Петре и Февроние…</div>
+                <div class="separator">________________________________________________</div>
+                <div class="prayer-text">
+                    молите милостиваго <span class="gold-accent">Бога</span> / да прегрешений оставление / подаст душам нашим.
+                </div>
+            </div>
+
+            <div class="cross-decoration">✞ ✞ ✞</div>
         </div>
 
         <div class="footer">
             <p>Да благословит нас Господь молитвами святых Своих</p>
         </div>
+         <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Лия Пухтель</span></strong>. Все права защищены
+      </div>
+      <div class="credits">
+        Создано с ❤️ для профессионального сайта
+      </div>
+    </div>
+  </footer>
     </div>
 </body>
 </html>
+
